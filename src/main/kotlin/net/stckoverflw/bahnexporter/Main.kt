@@ -55,7 +55,7 @@ suspend fun main() {
             targets.forEach { target ->
                 LOG.debug { "Collecting for ${target.id} (${target.name})" }
                 val irisAbfahrten = httpClient.get(Config.configuration.baseApiUrl + "/iris/v2/abfahrten/${target.id}") {
-                    parameter("lookbehind", "90")
+                    parameter("lookbehind", "150")
                     parameter("lookahead", "30")
                 }.body<IrisAbfahrten>()
 
