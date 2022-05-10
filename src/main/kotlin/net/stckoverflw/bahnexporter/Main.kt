@@ -16,6 +16,7 @@ import net.stckoverflw.bahnexporter.config.Config
 import net.stckoverflw.bahnexporter.model.IrisAbfahrten
 import net.stckoverflw.bahnexporter.util.delayPoint
 import net.stckoverflw.bahnexporter.util.mapToDelay
+import net.stckoverflw.bahnexporter.util.mapToDepartureOrArrival
 import net.stckoverflw.bahnexporter.util.planPoint
 import net.stckoverflw.bahnexporter.util.trainCountPoint
 
@@ -71,8 +72,9 @@ suspend fun main() {
 
                 val cancellations = departures.count { it.cancelled }
                 val notPlannedSequences = departures.count { !it.sameSequence }
+                val notPlannedPlatform = departures.mapToDepartureOrArrival().count { it.scheduledPlatform != it.platform }
 
-                writeApi.writePoint(planPoint(target.name, cancellations, notPlannedSequences))
+                writeApi.writePoint(planPoint(target.name, cancellations, notPlannedSequences, notPlannedPlatform))
 
                 writeApi.writePoint(trainCountPoint(target.name, departures.count()))
             }

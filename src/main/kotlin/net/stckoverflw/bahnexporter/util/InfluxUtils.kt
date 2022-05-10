@@ -16,11 +16,12 @@ fun delayPoint(station: String, minDelay: Int, maxDelay: Int, delaySum: Int, ave
         .time(Clock.System.now().toEpochMilliseconds(), WritePrecision.MS)
 
 
-fun planPoint(station: String, cancellations: Int, notPlannedSequences: Int) =
+fun planPoint(station: String, cancellations: Int, notPlannedSequences: Int, differentPlatform: Int) =
     Point.measurement("plan")
         .addTag(tagName, station)
         .addField("cancellations", cancellations)
         .addField("not_planned_sequences", notPlannedSequences)
+        .addField("different_platforms", differentPlatform)
         .time(Clock.System.now().toEpochMilliseconds(), WritePrecision.MS)
 
 fun trainCountPoint(station: String, count: Int) =

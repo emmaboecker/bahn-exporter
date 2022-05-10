@@ -22,6 +22,8 @@ data class Departures(
         val scheduledTime: Instant,
         val time: Instant,
         val delay: Int = 0,
+        val scheduledPlatform: String,
+        val platform: String
     )
 
     @Serializable
