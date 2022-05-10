@@ -44,6 +44,8 @@ data class Configuration(
     @SerialName("influx_bucket") val influxBucket: String,
     val interval: Int,
     val targets: List<TargetConfig>,
+    val lookbehind: Int = 10,
+    val lookahead: Int = 10,
     @SerialName("train_regex") val trainRegex: String = "ICE|RE|IC|IRE|RB|EC|ECE",
     @SerialName("base_api_url") val baseApiUrl: String = "https://marudor.de/api",
 )

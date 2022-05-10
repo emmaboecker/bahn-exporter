@@ -55,8 +55,8 @@ suspend fun main() {
             targets.forEach { target ->
                 LOG.debug { "Collecting for ${target.id} (${target.name})" }
                 val irisAbfahrten = httpClient.get(Config.configuration.baseApiUrl + "/iris/v2/abfahrten/${target.id}") {
-                    parameter("lookbehind", "150")
-                    parameter("lookahead", "30")
+                    parameter("lookbehind", Config.configuration.lookbehind)
+                    parameter("lookahead", Config.configuration.lookahead)
                 }.body<IrisAbfahrten>()
 
                 val departures = (irisAbfahrten.departures + irisAbfahrten.lookbehind).filter { trainRegex.matches(it.train.type) }

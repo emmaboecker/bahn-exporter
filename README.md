@@ -28,5 +28,7 @@ Fill the values in the config files with the values of your choice. You can also
 
 If you don't know how to set up influx (and optionally grafana) you can go to [this](https://github.com/StckOverflw/apcsnmp#setup-idk-why-you-would-wanna-do-that-but-you-do-you) guide. You can pretty much use the same setup here. 
 
+You can also change the value of `lookbehind` and `lookahead`
+
 ### Grafana Dashboard
 I use this [this](https://gist.github.com/StckOverflw/97768261a2385ceb2204b73164000f76) configuration for my grafana dashboard
