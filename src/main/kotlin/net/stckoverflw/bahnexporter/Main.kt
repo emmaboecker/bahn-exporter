@@ -59,7 +59,7 @@ suspend fun main() {
                     parameter("lookahead", "30")
                 }.body<IrisAbfahrten>()
 
-                val departures = irisAbfahrten.departures.filter { trainRegex.matches(it.train.type) }
+                val departures = (irisAbfahrten.departures + irisAbfahrten.lookbehind).filter { trainRegex.matches(it.train.type) }
 
                 val delay = departures.mapToDelay()
 

@@ -7,6 +7,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class IrisAbfahrten(
     val departures: List<Departures>,
+    val lookbehind: List<Departures>
 )
 
 @Serializable
