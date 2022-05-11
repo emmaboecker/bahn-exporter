@@ -63,8 +63,10 @@ suspend fun main() {
 
                 val delay = departures.mapToDelay()
 
-                val minDelay = delay.filter { it > 0 }.minOf { it }
-                val maxDelay = delay.maxOf { it }
+                val delaysAboveZero = delay.filter { it > 0 }
+
+                val minDelay = if (delaysAboveZero.isNotEmpty()) delaysAboveZero.minOf { it } else 0
+                val maxDelay = if (delay.isNotEmpty()) delay.maxOf { it } else 0
                 val delaySum = delay.sum()
                 val averageDelay = delaySum.toDouble() / delay.count { it > 0 }
 
