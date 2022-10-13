@@ -27,7 +27,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.3.2")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
 
-    implementation("ch.qos.logback:logback-classic:1.2.11")
+    implementation("ch.qos.logback:logback-classic:1.4.4")
     implementation("io.github.microutils:kotlin-logging:2.1.23")
 }
 
