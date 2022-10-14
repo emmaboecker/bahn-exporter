@@ -25,7 +25,7 @@ dependencies {
     implementation("dev.inmo:krontab:0.8.2")
 
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
 
     implementation("ch.qos.logback:logback-classic:1.4.4")
     implementation("io.github.microutils:kotlin-logging:3.0.2")
