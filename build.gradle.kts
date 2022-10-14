@@ -24,7 +24,7 @@ dependencies {
     implementation("com.influxdb:influxdb-client-kotlin:6.6.0")
     implementation("dev.inmo:krontab:0.8.2")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.3.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
 
     implementation("ch.qos.logback:logback-classic:1.4.4")
