@@ -28,7 +28,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
 
     implementation("ch.qos.logback:logback-classic:1.4.4")
-    implementation("io.github.microutils:kotlin-logging:3.0.2")
+    implementation("io.github.microutils:kotlin-logging:3.0.4")
 }
 
 tasks.withType<KotlinCompile> {
