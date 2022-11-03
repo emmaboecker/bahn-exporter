@@ -21,7 +21,7 @@ dependencies {
     implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
     implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
 
-    implementation("com.influxdb:influxdb-client-kotlin:6.6.0")
+    implementation("com.influxdb:influxdb-client-kotlin:6.7.0")
     implementation("dev.inmo:krontab:0.8.2")
 
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
